@@ -1,0 +1,31 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+:host {
+    display: flex;
+    flex-direction: row;
+    background: black;
+    height: 100vw;
+}
+h3 {
+    font-size: 30px;
+}
+p {
+    color: whitesmoke;
+}
+label {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: grey;
+    border-radius: 5px;
+}
+input, textarea {
+    height: 30px;
+    background-color: rgba(148, 90, 166, 0.66);
+}
+button {
+    background-color: rgba(14, 14, 117, 0.439);
+    color: white;
+}

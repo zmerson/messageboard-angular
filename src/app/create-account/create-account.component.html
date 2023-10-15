@@ -1,0 +1,12 @@
+<h2>Create Account</h2>
+    <form >
+  <div>
+    <label for="email">Email:</label>
+    <input [(ngModel)]="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+  <button (click)="register()" type="submit">Register</button>
+</form>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-c33d8": {
+      "hosting": {
+        "chatapp": [
+          "chat-c33d8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chat-c33d8"
+  }
+}

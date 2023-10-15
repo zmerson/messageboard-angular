@@ -1,0 +1,24 @@
+<div class="navbar-wrapper">
+<mat-toolbar color="primary">
+    <mat-icon>local_fire_department</mat-icon>
+    <!-- <div class="navbar-logo">
+      <img src="path/to/your/logo.png" alt="Logo">
+      <span>Your App Name</span>
+    </div> -->
+    <div class="navbar-links" [ngClass]="{ 'show': isNavbarOpen }" (clickOutside)="isNavbarOpen = false">
+      <a routerLink="/">Home</a>
+      <a routerLink="/posts">Posts</a>
+      <a routerLink="/profile">Profile</a>
+      <a routerLink="/items">Items</a>
+      <a *ngIf="isAdmin" routerLink="/admin">Admin</a>
+      <button *ngIf="!isLoggedIn" (click)="openDialog()">Login</button>
+      <button *ngIf="isLoggedIn" (click)="logout()">Logout</button> 
+    </div>
+    <div class="hamburger" (click)="toggleNavbar()">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </div>
+</mat-toolbar>
+
+</div>

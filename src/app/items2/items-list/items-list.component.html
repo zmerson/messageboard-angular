@@ -1,0 +1,56 @@
+<app-card class="feed">
+    <div class="post-form">
+    <!-- <h3 class="form-title">Create a New Item</h3>
+    <p>p tag</p>
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <div *ngIf="posts">
+            <p>posts here</p>
+        </div>
+        <div>
+            <label for="userName">Title:</label>
+            <input type="text" id="userName" name="userName" formControlName="userName">
+        </div>
+        <div>
+            <label for="content">Content:</label>
+            <textarea id="password" name="password" formControlName="password"></textarea>
+        </div>
+      <button type="submit" [disabled]="postForm.invalid">Submit</button>
+    </form> -->
+
+  
+    <h2>Recent Posts</h2>
+    <ul>
+      <li *ngFor="let post of posts">
+        <a>link to post</a>
+        <h3 (click)="click()">{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+      </li>
+    </ul>
+  
+    <button (click)="onPreviousPage()">Previous</button>
+    <button (click)="onNextPage()">Next</button>
+  </div>
+</app-card>
+
+<app-card class="form">
+<form [formGroup]="postForm" (ngSubmit)="onSubmit2()">
+    <div *ngIf="posts">
+        <p>new post</p>
+    </div>
+    <div>
+        <p>post here</p>
+    </div>
+  <label for="title">title</label>
+  <input type="text" id="title" name="title" [value]="" formControlName="title">
+
+  <label for="content">content</label>
+  <textarea id="content" name="content" formControlName="content"></textarea>
+
+  <button type="submit" [disabled]="postForm.invalid">Submit2</button>
+</form>
+
+</app-card>
+
+<app-card>
+    <h3>123</h3>
+</app-card>
